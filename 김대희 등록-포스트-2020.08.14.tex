@@ -1,0 +1,300 @@
+%	------------------------------------------------------------------------------
+%
+%		작성 : 2020년 
+%				7월 
+%				21일 
+%				첫 작업
+%
+%
+%
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a0paper, landscape]{tikzposter}
+%	\documentclass[25pt, a1paper ]{tikzposter}
+	\documentclass[	25pt, 
+							a0paper, 
+							portrait, %
+							margin=0mm, %
+							innermargin=10mm,  		%
+							blockverticalspace=4mm, %
+							colspace=5mm, 
+							subcolspace=0mm
+							]{tikzposter}
+
+
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a1paper]{tikzposter}
+
+% 	12pt  14pt 17pt  20pt  25pt
+%
+%	a0 a1 a2
+%
+%	landscape  portrait
+%
+
+	%% Tikzposter is highly customizable: please see
+	%% https://bitbucket.org/surmann/tikzposter/downloads/styleguide.pdf
+
+	%	========================================================== 	Package
+		\usepackage{kotex}						% 한글 사용
+
+
+%% Available themes: see also
+%% https://bitbucket.org/surmann/tikzposter/downloads/themes.pdf
+%	\usetheme{Default}
+%	\usetheme{Rays}
+%	\usetheme{Basic}
+	\usetheme{Simple}
+%	\usetheme{Envelope}
+%	\usetheme{Wave}
+%	\usetheme{Board}
+%	\usetheme{Autumn}
+%	\usetheme{Desert}
+
+%% Further changes to the title etc is possible
+%	\usetitlestyle{Default}			%
+%	\usetitlestyle{Basic}				%
+%	\usetitlestyle{Empty}				%
+%	\usetitlestyle{Filled}				%
+%	\usetitlestyle{Envelope}			%
+%	\usetitlestyle{Wave}				%
+%	\usetitlestyle{verticalShading}	%
+
+
+%	\usebackgroundstyle{Default}
+%	\usebackgroundstyle{Rays}
+%	\usebackgroundstyle{VerticalGradation}
+%	\usebackgroundstyle{BottomVerticalGradation}
+%	\usebackgroundstyle{Empty}
+
+%	\useblockstyle{Default}
+%	\useblockstyle{Basic}
+%	\useblockstyle{Minimal}		% 이것은 간단함
+%	\useblockstyle{Envelope}		% 
+%	\useblockstyle{Corner}		% 사각형
+%	\useblockstyle{Slide}			%	띠모양  
+	\useblockstyle{TornOut}		% 손그림모양
+
+
+	\usenotestyle{Default}
+%	\usenotestyle{Corner}
+%	\usenotestyle{VerticalShading}
+%	\usenotestyle{Sticky}
+
+%	\usepackage{fontspec}
+%	\setmainfont{FreeSerif}
+%	\setsansfont{FreeSans}
+
+%	------------------------------------------------------------------------------ 제목
+
+	\title{ 김대희 등록  }
+
+	\author{ 2020년 8월 14일  }
+
+%	\institute{서영엔지니어링}
+%	\titlegraphic{\includegraphics[width=7cm]{IMG_1934}}
+
+	%% Optional title graphic
+	%\titlegraphic{\includegraphics[width=7cm]{IMG_1934}}
+	%% Uncomment to switch off tikzposter footer
+	% \tikzposterlatexaffectionproofoff
+
+\begin{document}
+
+
+	\maketitle[
+					width=841mm,
+					linewidth = 2mm,
+					innersep=4mm,
+%					titletotopverticalspace=0mm, %
+%					titletoblockverticalspace=0mm, %
+					titletextscale =4, 
+				]
+
+		%		a0  841 - 1189
+		%		a1  594 - 841
+		%		a2  420 - 594
+
+
+
+	\begin{columns}
+
+		\column{0.5}
+
+%	------------------------------------------------------------------------------ block 정의
+
+			\block[
+						titleoffsetx =0mm,	 	%
+						titleoffsety=0mm,	 	% 
+						bodyoffsetx=00mm,	%
+						bodyoffsety=0mm	 	%
+						titlewidthscale=2, 
+						bodywidthscale=1,
+						titleleft, 
+%						titlecenter, 
+%						titleright,
+						bodyverticalshift=0mm  % 제목과 본과의 간격
+						roundedcorners=50, 
+						linewidth=1mm,
+						titleinnersep=10mm, 
+%						bodyinnersep=0mm
+					]
+			{■  2020년 8월 }
+			{
+					\setlength{\leftmargini}{7em}
+					\setlength{\labelsep} {1em}
+				\begin{LARGE}
+					\begin{itemize}
+					\item [서장 ] 30,000
+					\item [사경 ] 
+					\item [풍물단 ] 40,000
+					\item [절로 ] 30,000
+					\item [불화 ] 
+					\item [요가 ] 
+					\item [합계 ] 100,000
+					\end{itemize}
+				\end{LARGE}
+			}
+
+
+	%	====== ====== ====== ====== ====== 
+		\column{0.5}
+
+%	------------------------------------------------------------------------------
+		\block{ ■ 서장 }
+		{
+			\setlength{\leftmargini}{7em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+%			\setlength{\partopsep}{0pt}
+%			\setlength{\parskip}{0pt}
+%			\setlength{\parsep}{0pt}
+%			\setlength{\topsep}{0pt}
+%			\setlength{\itemsep}{0pt}
+%			\setlength{\itemindent}{4em} % summary indentation: par 1.25cm + bullet 0.63 + magic number picked empirically (0.25cm)
+%			\setlength{\leftmargin}{0pt}			
+			\begin{LARGE}
+			\begin{itemize}
+			\item [이름] 붓다선원
+			\item [내용] 서장 
+			\item [금액] 10,000 \\ 저번달에 20,000 과다 송금 해서 이번달은 10,000만 송금
+			\item [은행] 		농협
+			\item [계좌번호] 	3010124691771
+			\item [예금주] 	 대한불교조계종붓다선
+			\end{itemize}
+			\end{LARGE}
+
+		}
+
+
+%	------------------------------------------------------------------------------
+		\block{■ 사경 }
+		{
+			\setlength{\leftmargini}{7em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+			\begin{LARGE}
+			\begin{itemize}
+			\item [이름] 소림사
+			\item [내용] 사경
+			\item [금액] 50,000 시간을 못 맞춤 해서 포기 
+			\item [은행] 
+			\item [계좌번호] 
+			\item [예금주] 
+			\end{itemize}
+			\end{LARGE}
+		}		
+
+
+
+
+%	------------------------------------------------------------------------------
+		\block{■ 풍물단 }
+		{
+			\setlength{\leftmargini}{7em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+			\begin{LARGE}
+			\begin{itemize}
+			\item [이름] 풍물단
+			\item [내용] 장구
+			\item [금액] 40,000
+			\item [은행] 
+			\item [계좌번호] 
+			\item [예금주] 
+			\end{itemize}
+			\end{LARGE}
+		}		
+
+%	------------------------------------------------------------------------------
+		\block{■ 불화 }
+		{
+			\setlength{\leftmargini}{7em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+			\begin{LARGE}
+			\begin{itemize}
+			\item [이름] 유운 갤러리
+			\item [내용] 불화
+			\item [금액] 200,000 주재비 없음 포기
+			\item [은행] 
+			\item [계좌번호] 
+			\item [예금주] 
+			\end{itemize}
+			\end{LARGE}
+		}		
+
+
+%	------------------------------------------------------------------------------
+		\block{■ 요가 }
+		{
+			\setlength{\leftmargini}{7em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+			\begin{LARGE}
+			\begin{itemize}
+			\item [이름] 동구국민문화체육센터
+			\item [내용] 요가
+			\item [금액] 38,000 시간 못 맞춤
+			\item [은행] 
+			\item [계좌번호] 
+			\item [예금주] 
+			\end{itemize}
+			\end{LARGE}
+		}		
+
+%	------------------------------------------------------------------------------
+		\block{■ 절로 }
+		{
+			\setlength{\leftmargini}{7em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+			\begin{LARGE}
+			\begin{itemize}
+			\item [이름] 절로 명상산악회
+			\item [내용] 등산
+			\item [금액] 30,000 
+			\item [은행] 봉래산 산행 
+			\item [계좌번호] 
+			\item [예금주] 
+			\end{itemize}
+			\end{LARGE}
+		}		
+
+
+
+
+	\end{columns}
+
+
+
+
+\end{document}
+
+
+		\begin{huge}
+		\end{huge}
+
+		\begin{LARGE}
+		\end{LARGE}
+
+		\begin{Large}
+		\end{Large}
+
+		\begin{large}
+		\end{large}
+
