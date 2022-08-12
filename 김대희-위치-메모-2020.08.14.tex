@@ -1,0 +1,747 @@
+%	-------------------------------------------------------------------------------
+%
+%
+%		작성
+%		2020년
+%		08월
+%		14일
+%		우암동 사무실 짐 빼면서 첫 작성
+%
+%
+%
+%
+%	-------------------------------------------------------------------------------
+
+%\documentclass[10pt,xcolor=pdftex,dvipsnames,table]{beamer}
+%\documentclass[10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%\documentclass[14pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+\documentclass[aspectratio=1610,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+
+		% Font Size
+		%	default font size : 11 pt
+		%	8,9,10,11,12,14,17,20
+		%
+		% 	put frame titles 
+		% 		1) 	slideatop
+		%		2) 	slide centered
+		%
+		%	navigation bar
+		% 		1)	compress
+		%		2)	uncompressed
+		%
+		%	Color
+		%		1) blue
+		%		2) red
+		%		3) brown
+		%		4) black and white	
+		%
+		%	Output
+		%		1)  	[default]	
+		%		2)	[handout]		for PDF handouts
+		%		3) 	[trans]		for PDF transparency
+		%		4)	[notes=hide/show/only]
+
+		%	Text and Math Font
+		% 		1)	[sans]
+		% 		2)	[sefif]
+		%		3) 	[mathsans]
+		%		4)	[mathserif]
+
+
+		%	---------------------------------------------------------	
+		%	슬라이드 크기 설정 ( 128mm X 96mm )
+		%	---------------------------------------------------------	
+%			\setbeamersize{text margin left=2mm}
+%			\setbeamersize{text margin right=2mm}
+
+	%	========================================================== 	Package
+		\usepackage{kotex}						% 한글 사용
+		\usepackage{amssymb,amsfonts,amsmath}	% 수학 수식 사용
+		\usepackage{color}					%
+		\usepackage{colortbl}					%
+
+
+	%		========================================================= 	note 옵션인 
+	%			\setbeameroption{show only notes}
+		
+
+	%		========================================================= 	Theme
+
+		%	---------------------------------------------------------	
+		%	전체 테마
+		%	---------------------------------------------------------	
+		%	테마 명명의 관례 : 도시 이름
+%			\usetheme{default}			%
+%			\usetheme{Madrid}    		%
+%			\usetheme{CambridgeUS}    	% -red, no navigation bar
+%			\usetheme{Antibes}			% -blueish, tree-like navigation bar
+
+		%	----------------- table of contents in sidebar
+			\usetheme{Berkeley}		% -blueish, table of contents in sidebar
+									% 개인적으로 마음에 듬
+
+%			\usetheme{Marburg}			% - sidebar on the right
+%			\usetheme{Hannover}		% 왼쪽에 마크
+%			\usetheme{Berlin}			% - navigation bar in the headline
+%			\usetheme{Szeged}			% - navigation bar in the headline, horizontal lines
+%			\usetheme{Malmoe}			% - section/subsection in the headline
+
+%			\usetheme{Singapore}
+%			\usetheme{Amsterdam}
+
+		%	---------------------------------------------------------	
+		%	색 테마
+		%	---------------------------------------------------------	
+%			\usecolortheme{albatross}	% 바탕 파란
+%			\usecolortheme{crane}		% 바탕 흰색
+%			\usecolortheme{beetle}		% 바탕 회색
+%			\usecolortheme{dove}		% 전체적으로 흰색
+%			\usecolortheme{fly}		% 전체적으로 회색
+%			\usecolortheme{seagull}	% 휜색
+%			\usecolortheme{wolverine}	& 제목이 노란색
+%			\usecolortheme{beaver}
+
+		%	---------------------------------------------------------	
+		%	Inner Color Theme 			내부 색 테마 ( 블록의 색 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{rose}		% 흰색
+%			\usecolortheme{lily}		% 색 안 칠한다
+%			\usecolortheme{orchid} 	% 진하게
+
+		%	---------------------------------------------------------	
+		%	Outter Color Theme 		외부 색 테마 ( 머리말, 고리말, 사이드바 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{whale}		% 진하다
+%			\usecolortheme{dolphin}	% 중간
+%			\usecolortheme{seahorse}	% 연하다
+
+		%	---------------------------------------------------------	
+		%	Font Theme 				폰트 테마
+		%	---------------------------------------------------------	
+%			\usfonttheme{default}		
+			\usefonttheme{serif}			
+%			\usefonttheme{structurebold}			
+%			\usefonttheme{structureitalicserif}			
+%			\usefonttheme{structuresmallcapsserif}			
+
+
+
+		%	---------------------------------------------------------	
+		%	Inner Theme 				
+		%	---------------------------------------------------------	
+
+%			\useinnertheme{default}
+			\useinnertheme{circles}		% 원문자			
+%			\useinnertheme{rectangles}		% 사각문자			
+%			\useinnertheme{rounded}			% 깨어짐
+%			\useinnertheme{inmargin}			
+
+
+
+
+		%	---------------------------------------------------------	
+		%	이동 단추 삭제
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{navigation symbols}{}
+
+		%	---------------------------------------------------------	
+		%	문서 정보 표시 꼬리말 적용
+		%	---------------------------------------------------------	
+%			\useoutertheme{infolines}
+
+
+			
+	%	---------------------------------------------------------- 	배경이미지 지정
+%			\pgfdeclareimage[width=\paperwidth,height=\paperheight]{bgimage}{./fig/Chrysanthemum.jpg}
+%			\setbeamertemplate{background canvas}{\pgfuseimage{bgimage}}
+
+		%	---------------------------------------------------------	
+		% 	본문 글꼴색 지정
+		%	---------------------------------------------------------	
+%			\setbeamercolor{normal text}{fg=purple}
+%			\setbeamercolor{normal text}{fg=red!80}	% 숫자는 투명도 표시
+
+
+		%	---------------------------------------------------------	
+		%	itemize 모양 설정
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{items}[ball]
+%			\setbeamertemplate{items}[circle]
+%			\setbeamertemplate{items}[rectangle]
+
+
+
+
+
+
+		\setbeamercovered{dynamic}
+
+
+
+
+
+		% --------------------------------- 	문서 기본 사항 설정
+		\setcounter{secnumdepth}{5} 		% 문단 번호 깊이
+		\setcounter{tocdepth}{5} 			% 문단 번호 깊이
+
+
+
+
+% ------------------------------------------------------------------------------
+% Begin document (Content goes below)
+% ------------------------------------------------------------------------------
+	\begin{document}
+	
+
+			\title{짐 위치 }
+
+			\author{김대희}
+
+			\date{2020년 
+					08월 
+					14일
+					금요일 }
+
+
+	%	==========================================================
+	%		개정 이력
+	%	----------------------------------------------------------
+	%	2020.08.14 첫 작성
+	%	----------------------------------------------------------
+
+	%	==========================================================
+	%
+	%	----------------------------------------------------------
+		\begin{frame}[plain]
+		\titlepage
+		\end{frame}
+
+
+
+%		\begin{frame} [plain]{목차}
+		\begin{frame} {목차}
+		\tableofcontents
+		\end{frame}
+		
+
+	%	========================================================== 	일일 업무 
+	%		Frame
+	%	----------------------------------------------------------
+		\part{기본 현황}
+		\frame{\partpage}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents
+		\end{frame}
+		
+
+		
+				
+		
+	%	 ----------------------------------------------------------
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{기본 개요}
+		\frame [plain] {\sectionpage}
+		
+
+		\begin{frame} [t,plain]
+			\begin{block} {업체 }
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			
+			\end{block}
+		\end{frame}
+		
+
+
+
+	%	========================================================== 	종류별
+	%		Frame
+	%	----------------------------------------------------------
+		\part{ 종류별 }
+		\frame{\partpage}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 문구류
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{문구류}
+		\frame [plain] {\sectionpage}
+
+	%	 ----------------------------------------------------------
+		\begin{frame} [t,plain]
+			\begin{block} { 문구류 }
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			
+			\end{block}
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 사경
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 사경 }
+		\frame [plain] {\sectionpage}
+
+	%	 ----------------------------------------------------------
+		\begin{frame} [t,plain]
+			\begin{block} { 사경 }
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			
+			\end{block}
+		\end{frame}
+	
+	%	 ---------------------------------------------------------- 공구
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 공구  }
+		\frame [plain] {\sectionpage}
+
+	%	 ----------------------------------------------------------
+		\begin{frame} [t,plain]
+			\begin{block} { 공구 }
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			
+			\end{block}
+		\end{frame}
+	
+
+	%	 ---------------------------------------------------------- 장비
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 장비 }
+		\frame [plain] {\sectionpage}
+
+	%	 ----------------------------------------------------------
+		\begin{frame} [t,plain]
+			\begin{block} { 장비 }
+			\begin{itemize}
+				\item 컴퓨터 미니 : 효심사
+				\item 프린트 : 효심사
+				\item 제본기 
+				\item 
+			\end{itemize}
+			
+			\end{block}
+		\end{frame}
+	
+
+	%	 ---------------------------------------------------------- 제본기
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 제본기 }
+		\frame [plain] {\sectionpage}
+
+	%	 ----------------------------------------------------------
+		\begin{frame} [t,plain]
+			\begin{block} { 제본기 }
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 펀치기 
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 펀치기 }
+		\frame [plain] {\sectionpage}
+
+	%	 ----------------------------------------------------------
+		\begin{frame} [t,plain]
+			\begin{block} { 펀치기  }
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+
+	%	========================================================== 	장소 
+	%		Frame
+	%	----------------------------------------------------------
+		\part{ 장소 }
+		\frame{\partpage}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents
+		\end{frame}
+		
+
+	%	 ---------------------------------------------------------- 지하실
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 초량 지하실 }
+		\frame [plain] {\sectionpage}
+
+		\begin{frame} [t,plain]
+			\begin{block} {남창 택시  }
+			\begin{itemize}
+				\item 남창 콜택시 052) 238 - 3129 
+  				\item  
+				\item  
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+		
+
+	%	 ---------------------------------------------------------- 초량 2층
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 초량 2층}
+		\frame [plain] {\sectionpage}
+
+		\begin{frame} [t,plain]
+			\begin{block} {남창 버스 }
+			\begin{itemize}
+				\item 5004 남창고등학교 앞 
+  				\item  
+				\item  
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 초량 2층 창고
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 초량 2층 창고 }
+		\frame [plain] {\sectionpage}
+
+		\begin{frame} [t,plain]
+			\begin{block} { 초량 2층 창고 }
+			\begin{itemize}
+				\item 5004 남창고등학교 앞 
+  				\item  
+				\item  
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+
+	%	 ---------------------------------------------------------- 초량 3층
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 초량 3층  }
+		\frame [plain] {\sectionpage}
+
+		\begin{frame} [t,plain]
+			\begin{block} { 초량 3층  }
+			\begin{itemize}
+				\item  
+  				\item  
+				\item  
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+
+	%	 ---------------------------------------------------------- 초량 옥상
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 초량 옥상 }
+		\frame [plain] {\sectionpage}
+
+		\begin{frame} [t,plain]
+			\begin{block} { 초량 옥상 }
+			\begin{itemize}
+				\item  
+  				\item  
+				\item  
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 동래 효심사
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 동래 효심사 }
+		\frame [plain] {\sectionpage}
+
+		\begin{frame} [t,plain]
+			\begin{block} { 동래 효심사 }
+			\begin{itemize}
+				\item  
+  				\item  
+				\item  
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 남창 울산지사 
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 남창 울산지사  }
+		\frame [plain] {\sectionpage}
+
+		\begin{frame} [t,plain]
+			\begin{block} { 남창 울산지사 }
+			\begin{itemize}
+				\item  
+  				\item  
+				\item  
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+
+
+	%	========================================================== 	울산 지사 
+	%		Frame
+	%	----------------------------------------------------------
+		\part{울산 지사}
+		\frame{\partpage}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents
+		\end{frame}
+		
+
+	%	 ---------------------------------------------------------- 울산지사
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{비밀번호}
+		\frame [plain] {\sectionpage}
+
+		\begin{frame} [t,plain]
+			\begin{block} {비밀번호}
+			\begin{itemize}
+				\item 잘하자 18 ** ( * )
+  				\item 21 80 17 23 ( 1 )
+				\item ! gy 4615 379 
+			\end{itemize}
+			매주 수요일 패스워드 변경 
+			\end{block}
+		\end{frame}
+
+
+		\begin{frame} [t,plain]
+			\begin{block} {통근 (출근) }
+			\begin{itemize}
+  				\item 집 출발 6:20 
+ 				\item 초량 출발 6:34 
+				\item 교대 도착 6:53
+				\item 교대 출발 7:02
+				\item 오시리아 도착 7:33
+				\item 통근차 78러 6371  
+				\item 김중모 (교통) 010 4772 7719 
+ 			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+		\begin{frame} [t,plain]
+			\begin{block} {통근 (퇴근) }
+			\begin{itemize}
+  				\item 사무실 출발 6:00 
+ 				\item 오시리아 도착  6:12 38 
+				\item 교대 도착 
+				\item 교대 출발 7:02
+				\item 서면 도착 
+ 			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+
+		\begin{frame} [t,plain]
+			\begin{block} {식대}
+			\begin{itemize}
+  				\item 장은경 010 5068 0903 
+ 				\item 계좌번호 
+				\item 끼당 3,500
+				\item 8월 
+				\item 9월 
+				\item 10월 
+				\item 11월'
+				\item 12월 
+ 			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 울산지사
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 조직}
+		\frame [plain] {\sectionpage}
+
+		\begin{frame} [t,plain]
+			\begin{block} {조직}
+			\begin{itemize}
+				\item 지사장	박태완	010 - 3341 - 9636
+				\item 고객지원팀장	윤남구	010 - 8806 - 5700
+				\item 도로안전팀장	손정줄	010 - 6312 - 8506
+				\item 교통안전팀장	하규영	010 - 9145 - 5246
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+
+	%	 ---------------------------------------------------------- 시공사 호산건설
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 고객 지원팀 }
+		\frame [plain] {\sectionpage}
+
+
+		\begin{frame} [t,plain]
+			\begin{block} {호산건설  }
+			\begin{itemize}
+				\item 성환국 현장 소장 3847 8556
+				\item 강봉준 공무 차장 2851 9312
+				\item 박대일 공사 과장 5449 1587
+				\item 곽대승 공사 주임 9493 5740
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 시공사 무성토건
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 도로 안전팀 }
+		\frame [plain] {\sectionpage}
+
+
+		\begin{frame} [t,plain]
+			\begin{block} {무성토건 }
+			\begin{itemize}
+				\item 정문경 현장 소장 4597 6705
+				\item 송봉건 공사 차장 2869 1891
+				\item 윤종민 작업 반장 6400 2811
+				\item 백호우 박  철
+				\item 크레인 유영철
+				\item 항타기 허동호
+				\item 항타공 김명국
+				\item 항타공 이윤근
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+	%	 ---------------------------------------------------------- 관련업체 
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{ 교통안전팀 }
+		\frame [plain] {\sectionpage}
+
+
+		\begin{frame} [t,plain]
+			\begin{block} {관련 업체}
+			\begin{itemize}
+				 \setlength{\leftmargin}	{18.0em} 
+				 \setlength{\labelwidth}	{18em} 
+				 \setlength{\labelsep}	{1em}
+				\item \textbf{폐기물} 호생환경 제인환 대리 9646 3966
+				\item \textbf{폐기물} 삼우 우리콘 박찬영 과장 6700 0689
+				\item \textbf{PC BOX} KC산업 책임 하승호 2997 4889
+				\item \textbf{가시설} 와우스틸 김홍직 전무 4644 4046 : 띠장 H형강 면천 4월3일 공장 검수 
+				\item \textbf{가시설} 엠스틸 장광식 차장 7447 2224 : 강관 스트러트 진천  4월3일 공장 검수
+
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+
+	%	 ---------------------------------------------------------- 거래처
+	%	 Frame
+	%	 ----------------------------------------------------------
+		\section{거래처}
+		\frame [plain] {\sectionpage}
+		
+
+		\begin{frame} [t,plain]
+			\begin{block} {거래처 }
+			\begin{itemize}
+				\item 복사기 
+				\item 물
+				\item  
+			\end{itemize}
+			
+			\end{block}
+		\end{frame}
+
+		\begin{frame} [t,plain]
+			\begin{block} {복사기 }
+			\begin{itemize}
+				\item 업체명 : 대승솔류션
+				\item 사업자번호 : 605  08 80654 
+				\item 담당자   :  강재욱 010 4566  8063
+				\item  계약 : 칼(5,000매 100원 ) 흑(3,000매 10원)  140,000 14일 기준
+				\item  계약 기간 : 2019년 11월 14일 부터 2020년 10월 13일 12개월간 
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+		\begin{frame} [t,plain]
+			\begin{block} {생수 }
+			\begin{itemize}
+				\item 담당자 
+				\item 연락처
+				\item  단가 :  1통당 
+			\end{itemize}
+			\end{block}
+		\end{frame}
+
+
+% ------------------------------------------------------------------------------ ------------------------------------------------------------------------------ ------------------------------------------------------------------------------
+% End document
+% ------------------------------------------------------------------------------ ------------------------------------------------------------------------------ ------------------------------------------------------------------------------
+\end{document}
+
+
+	%	----------------------------------------------------------
+	%		Frame
+	%	----------------------------------------------------------
+		\begin{frame} [c]
+%		\begin{frame} [b]
+%		\begin{frame} [t]
+		\frametitle{감리 보고서}
+		\end{frame}						
+
