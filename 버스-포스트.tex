@@ -1,0 +1,731 @@
+%	------------------------------------------------------------------------------
+%
+%		작성 : 2020년 7월 26일 첫 작업
+%
+%
+
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a0paper, landscape]{tikzposter}
+%	\documentclass[25pt, a1paper ]{tikzposter}
+	\documentclass[	14pt, 
+							a0paper, 
+%							portrait, 		%
+							landscape, 	%
+							margin=0mm, %
+							innermargin=4mm,  		%
+							blockverticalspace=4mm, %
+							colspace=5mm, 
+							subcolspace=0mm
+							]{tikzposter}
+
+
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a1paper]{tikzposter}
+
+% 	12pt  14pt 17pt  20pt  25pt
+%
+%	a0 a1 a2
+%
+%	landscape  portrait
+%
+
+	%% Tikzposter is highly customizable: please see
+	%% https://bitbucket.org/surmann/tikzposter/downloads/styleguide.pdf
+
+	%	========================================================== 	Package
+		\usepackage{kotex}						% 한글 사용
+
+
+%% Available themes: see also
+%% https://bitbucket.org/surmann/tikzposter/downloads/themes.pdf
+%	\usetheme{Default}
+%	\usetheme{Rays}
+%	\usetheme{Basic}
+	\usetheme{Simple}
+%	\usetheme{Envelope}
+%	\usetheme{Wave}
+%	\usetheme{Board}
+%	\usetheme{Autumn}
+%	\usetheme{Desert}
+
+%% Further changes to the title etc is possible
+%	\usetitlestyle{Default}			%
+%	\usetitlestyle{Basic}				%
+%	\usetitlestyle{Empty}				%
+%	\usetitlestyle{Filled}				%
+%	\usetitlestyle{Envelope}			%
+%	\usetitlestyle{Wave}				%
+%	\usetitlestyle{verticalShading}	%
+
+
+%	\usebackgroundstyle{Default}
+%	\usebackgroundstyle{Rays}
+%	\usebackgroundstyle{VerticalGradation}
+%	\usebackgroundstyle{BottomVerticalGradation}
+%	\usebackgroundstyle{Empty}
+
+%	\useblockstyle{Default}
+%	\useblockstyle{Basic}
+%	\useblockstyle{Minimal}		% 이것은 간단함
+%	\useblockstyle{Envelope}		% 
+%	\useblockstyle{Corner}		% 사각형
+%	\useblockstyle{Slide}			%	띠모양  
+	\useblockstyle{TornOut}		% 손그림모양
+
+
+	\usenotestyle{Default}
+%	\usenotestyle{Corner}
+%	\usenotestyle{VerticalShading}
+%	\usenotestyle{Sticky}
+
+%	\usepackage{fontspec}
+%	\setmainfont{FreeSerif}
+%	\setsansfont{FreeSans}
+
+%	------------------------------------------------------------------------------ 제
+
+	\title{ 버스 }
+
+	\author{ 20목20년 7월 26일 }
+
+%	\institute{서영엔지니어링}
+%	\titlegraphic{\includegraphics[width=7cm]{IMG_1934}}
+
+	%% Optional title graphic
+	%\titlegraphic{\includegraphics[width=7cm]{IMG_1934}}
+	%% Uncomment to switch off tikzposter footer
+	% \tikzposterlatexaffectionproofoff
+
+\begin{document}
+
+
+	\maketitle[
+					width=841mm,
+					linewidth = 0mm,
+					innersep = 2mm,
+%					titletotopverticalspace=0mm, %
+%					titletoblockverticalspace=0mm, %
+					titletextscale =1, 
+				]
+
+		%		a0  841 - 1189
+		%		a1  594 - 841
+		%		a2  420 - 594
+
+
+
+	\begin{columns}
+
+		\column{0.2}
+
+%	------------------------------------------------------------------------------ block 정의
+
+			\block[
+						titleoffsetx =0mm,	 	%
+						titleoffsety=0mm,	 	% 
+						bodyoffsetx=00mm,	%
+						bodyoffsety=0mm	 	%
+						titlewidthscale=2, 
+						bodywidthscale=1,
+						titleleft, 
+%						titlecenter, 
+%						titleright,
+						bodyverticalshift=0mm  % 제목과 본과의 간격
+						roundedcorners=50, 
+						linewidth=1mm,
+						titleinnersep=10mm, 
+%						bodyinnersep=0mm
+					]
+			{■  	효심사 버스 }
+			{
+					\setlength{\leftmargini}{3em}
+					\setlength{\labelsep} {1em}
+				\begin{LARGE}
+					\begin{itemize}
+					\item 100 번 
+					\item 110-1 번
+					\end{itemize}
+				\end{LARGE}
+			}
+
+
+%	------------------------------------------------------------------------------
+		\block{ ■  100 번 }
+		{
+			\setlength{\leftmargini}{7em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+%			\setlength{\partopsep}{0pt}
+%			\setlength{\parskip}{0pt}
+%			\setlength{\parsep}{0pt}
+%			\setlength{\topsep}{0pt}
+%			\setlength{\itemsep}{0pt}
+%			\setlength{\itemindent}{4em} % summary indentation: par 1.25cm + bullet 0.63 + magic number picked empirically (0.25cm)
+%			\setlength{\leftmargin}{0pt}			
+
+100
+청강리장전역
+첫차 04:50막차 21:50
+배차간격 15분
+
+
+청강리공영차고지(종점)
+16265
+청강리공영차고지(입구)
+16264
+연화교차로
+16334
+서암입구
+16336
+기차여행
+16113
+해광사
+16078
+동암후문
+16098
+동암정문
+16097
+용궁사국립수산과학원
+16069
+동부산관광단지
+16096
+당사 양경마을
+16002
+공수
+16094
+송정해수욕장
+09089
+송정
+09022
+송정1단지주공
+09012
+부흥고등학교 해운대백병원
+09043
+한라아파트
+09037
+영남아파트
+09032
+대우아파트
+09031
+현대아파트
+09026
+해운대보건소
+09020
+동백중학교
+09024
+미포 문탠로드입구
+09021
+중1동
+09084
+해운대구청
+09090
+해운대구청어귀삼거리
+09731
+해운대도시철도역
+09729
+운촌
+09727
+동백역
+09723
+부산문화여고
+09721
+올림픽교차로
+09719
+벡스코 시립미술관
+09717
+동해선 벡스코역
+09715
+센텀센시빌
+09713
+센텀고등학교
+09711
+동해선 센텀역
+09709
+동부지청어귀 교차로
+09707
+과정교
+09331
+수영강푸르지오아파트
+13161
+연제예식장
+13163
+부산소방본부 교통정보서비스센터
+13082
+태광아파트
+13081
+토곡한양아파트
+13076
+연산8치안센터
+13074
+파크시티아파트입구
+13169
+연천시장
+13070
+연동시장
+13065
+경동아파트
+13062
+연안교
+13061
+우성아파트
+06164
+동래봉생병원
+06165
+낙민역(동래고등학교)
+06161
+동래시장
+06711
+동래시장정문.수안치안센터
+06251
+부산은행 동래금융센터
+06252
+복산동주민센터
+06253
+명륜초등학교
+06042
+동래구노인복지관
+06040
+온천입구
+06018
+온천장
+06013
+온천장역.CGV동래
+06232
+금정초등학교
+11090
+부산대학교정문
+11080
+장전1치안센터
+11076
+장전역
+11071
+장전동어린이놀이터
+11074
+
+회차
+장전중앙교회
+11075
+현대아파트
+11079
+부산대학교정문
+11085
+부산대학교후문
+11089
+금정초등학교
+11091
+온천장역.SK허브스카이
+06011
+온천장
+06023
+온천입구
+06020
+동래구노인복지관
+06036
+동래우체국
+06045
+부산지방기상청
+동래전화국
+06071
+동래시장
+06712
+낙민역(동래고등학교)
+06158
+동래봉생병원
+06162
+우성아파트
+06163
+경동아파트
+13063
+연동시장
+13069
+부산경상대학입구
+13071
+연산8치안센터
+13075
+토곡한양아파트
+13077
+태광아파트
+13080
+부산소방본부.부산교통정보서비스센터
+13158
+수영강푸르지오아파트
+13159
+과정교
+09332
+동부지청어귀 교차로
+09708
+동해선 센텀역
+09710
+센텀고등학교
+09712
+센텀센시빌
+09714
+동해선 벡스코역
+09716
+올림픽교차로 환승센터
+09718
+올림픽교차로
+09720
+부산문화여고
+09722
+동백역
+09724
+운촌
+09728
+해운대도시철도역
+09730
+해운대시장
+09107
+해운대온천사거리
+09086
+중1동
+09085
+미포 문탠로드입구
+09019
+동백중학교
+09023
+동백초등학교해운대보건소
+09025
+상록아파트
+09027
+대우아파트
+09030
+영남아파트
+09034
+벽산아파트
+09036
+신도시시장.아세안문화원
+09039
+송정1단지주공
+09011
+송정
+09009
+송정해수욕장
+09010
+공수
+16001
+당사 양경마을
+16095
+동부산관광단지
+16052
+용궁사국립수산과학원
+16003
+동암정문
+16079
+동암후문
+16080
+해광사
+16090
+기차여행
+16065
+서암입구
+16337
+연화교차로
+16335
+청강리공영차고지
+16266
+
+		}
+
+
+
+
+%	------------------------------------------------------------------------------
+		\block{ ■  110-1 번 }
+		{
+			\setlength{\leftmargini}{7em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+%			\setlength{\partopsep}{0pt}
+%			\setlength{\parskip}{0pt}
+%			\setlength{\parsep}{0pt}
+%			\setlength{\topsep}{0pt}
+%			\setlength{\itemsep}{0pt}
+%			\setlength{\itemindent}{4em} % summary indentation: par 1.25cm + bullet 0.63 + magic number picked empirically (0.25cm)
+%			\setlength{\leftmargin}{0pt}			
+
+110-1
+가야벽산APT부산대
+첫차 05:00막차 23:00
+배차간격 7분현재 5대 운행중
+벽산아파트
+5124
+진성아파트
+5126
+가야공원입구
+5128
+가야고교
+5130
+동의대학교입구
+5329
+가야여중
+5132
+가남시장
+5134
+미진마트
+5135
+가야1치안센터
+5136
+가야시장(가야역)
+5269
+부암역
+5195
+롯데호텔백화점(서면역)
+5321
+부전시장
+5708
+송상현광장
+5706
+양정역
+5704
+상수도사업본부
+5702
+부산시청
+13708
+연산역 연제초교
+13706
+연산교차로
+13056
+웰니스병원 연산농협
+13057
+경찰전직지원센터
+13060
+연안교
+13061
+우성아파트
+6164
+동래봉생병원
+6165
+낙민역(동래고등학교)
+6161
+동래시장
+6711
+동래시장정문.수안치안센터
+6251
+부산은행 동래금융센터
+6252
+복산동주민센터
+6253
+명륜초등학교
+6042
+동래구노인복지관
+6040
+온천입구
+6018
+온천장
+6013
+온천장역.CGV동래
+6232
+금정초등학교
+11090
+부산대학교정문
+11086
+
+회차
+부산대학교후문
+11089
+금정초등학교
+11091
+온천장역.SK허브스카이
+6011
+온천장
+6010
+금강원입구
+6008
+구 온천시장
+6026
+온천장
+6023
+온천입구
+6019
+동래구노인복지관
+6037
+동래우체국
+6044
+부산지방기상청
+동래전화국
+6071
+동래시장
+6712
+낙민역(동래고등학교)
+6158
+동래봉생병원
+6162
+우성아파트
+6163
+경찰전직지원센터
+13059
+웰니스병원 연산농협
+13058
+연산교차로
+13055
+연산역 연제초교
+13707
+부산시청
+13709
+상수도사업본부
+5701
+양정역
+5703
+송상현광장
+5705
+부전역
+5707
+부전시장
+5709
+롯데호텔백화점(서면역)
+5189
+부암역
+5194
+가야시장(가야역)
+5268
+가야1치안센터
+5137
+미진마트
+5007
+가남시장
+가야여중
+5133
+동의대학교입구
+5226
+가야고교
+5131
+가야공원입구
+5129
+진성아파트
+5127
+벽산아파트
+5123
+
+		}
+
+
+%	------------------------------------------------------------------------------
+		\block{ ■ 효심사 : 06 713 수인역 (동래교차로 )}
+		{
+			\setlength{\leftmargini}{5em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+			\begin{LARGE}
+			\begin{itemize}
+			\item 	129-1
+			\item 	144
+			\item 	148
+			\item 	183 (심야)
+			\item 	200
+			\item 	210
+			\item 	307
+			\item 	31
+			\item 	43
+			\item 	44
+			\item 	506
+			\item 	57
+			\item 	73 (아침)
+			\item 	
+			\end{itemize}
+			\end{LARGE}
+		}		
+
+
+
+
+
+	%	====== ====== ====== ====== ====== 
+		\column{0.2}
+
+
+%	------------------------------------------------------------------------------
+		\block{ ■ 붓다 선원 : 07190 시립박물관 , 부산문화회관 }
+		{
+			\setlength{\leftmargini}{5em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+			\begin{LARGE}
+			\begin{itemize}
+			\item 	138
+			\item 	138-1
+			\item 	남구10
+			\item 	남구9
+			\item 	1006
+			\end{itemize}
+			\end{LARGE}
+		}		
+
+
+%	------------------------------------------------------------------------------
+		\block{ ■ 붓다 선원 : 07103 문화회관, 시립박물관 }
+		{
+			\setlength{\leftmargini}{5em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+			\begin{LARGE}
+			\begin{itemize}
+			\item 	51
+			\item 	68
+			\item 	134
+			\item 	남구 2
+			\item 	남구 6
+			\end{itemize}
+			\end{LARGE}
+		}		
+
+
+%	------------------------------------------------------------------------------
+		\block{ ■ 우암초등학교 : 07076 (우암자유아파트 방면) 우암초등학교 }
+		{
+			\setlength{\leftmargini}{5em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+			\begin{LARGE}
+			\begin{itemize}
+			\item 	23
+			\item 	26
+			\item 	68
+			\item 	134
+			\item 	138-1
+			\item 	168
+			\item 	남구 3
+			\end{itemize}
+			\end{LARGE}
+		}		
+
+
+	%	====== ====== ====== ====== ====== 
+		\column{0.5}
+
+%	------------------------------------------------------------------------------
+		\block{■ 수업 }
+			{				
+			\setlength{\leftmargini}{9em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+
+			\begin{LARGE}
+			\begin{itemize}
+			\item [6월 04일]
+			\item [6월 11일]
+			\item [6월 18일]
+			\item [6월 25일]
+
+
+
+			\end{itemize}
+			\end{LARGE}
+		}
+
+
+
+	\end{columns}
+
+
+
+
+\end{document}
+
+
+		\begin{huge}
+		\end{huge}
+
+		\begin{LARGE}
+		\end{LARGE}
+
+		\begin{Large}
+		\end{Large}
+
+		\begin{large}
+		\end{large}
+
