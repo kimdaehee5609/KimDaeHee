@@ -1,0 +1,321 @@
+%	------------------------------------------------------------------------------
+%		2020년 
+%		6월 
+%		28일 
+%		첫 작업
+%
+%
+
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a0paper, landscape]{tikzposter}
+	\documentclass[20pt, a1paper ]{tikzposter}
+
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a1paper]{tikzposter}
+
+% 	12pt  14pt 17pt  20pt  25pt
+%
+%	a0 a1 a2
+%
+%	landscape  portrait
+%
+
+	%% Tikzposter is highly customizable: please see
+	%% https://bitbucket.org/surmann/tikzposter/downloads/styleguide.pdf
+
+	%	========================================================== 	Package
+		\usepackage{kotex}						% 한글 사용
+
+
+%% Available themes: see also
+%% https://bitbucket.org/surmann/tikzposter/downloads/themes.pdf
+%	\usetheme{Default}
+%	\usetheme{Rays}
+%	\usetheme{Basic}
+	\usetheme{Simple}
+%	\usetheme{Envelope}
+%	\usetheme{Wave}
+%	\usetheme{Board}
+%	\usetheme{Autumn}
+%	\usetheme{Desert}
+
+%% Further changes to the title etc is possible
+%	\usetitlestyle{Default}			%
+%	\usetitlestyle{Basic}				%
+%	\usetitlestyle{Empty}				%
+%	\usetitlestyle{Filled}				%
+%	\usetitlestyle{Envelope}			%
+%	\usetitlestyle{Wave}				%
+%	\usetitlestyle{verticalShading}	%
+
+
+%	\usebackgroundstyle{Default}
+%	\usebackgroundstyle{Rays}
+%	\usebackgroundstyle{VerticalGradation}
+%	\usebackgroundstyle{BottomVerticalGradation}
+%	\usebackgroundstyle{Empty}
+
+%	\useblockstyle{Default}
+%	\useblockstyle{Basic}
+%	\useblockstyle{Minimal}		% 이것은 간단함
+%	\useblockstyle{Envelope}		% 
+%	\useblockstyle{Corner}		% 사각형
+%	\useblockstyle{Slide}			%	띠모양  
+	\useblockstyle{TornOut}		% 손그림모양
+
+
+	\usenotestyle{Default}
+%	\usenotestyle{Corner}
+%	\usenotestyle{VerticalShading}
+%	\usenotestyle{Sticky}
+
+%	\usepackage{fontspec}
+%	\setmainfont{FreeSerif}
+%	\setsansfont{FreeSans}
+
+%	------------------------------------------------------------------------------ 제목
+
+	\title{ 물건 위치 }
+
+	\author{ 	작성 : 2020년 8월 14일 금요일 \\
+			수정 : 2022년 8월 12일 금요일 }
+
+
+	%% Optional title graphic
+	%\titlegraphic{\includegraphics[width=7cm]{IMG_1934}}
+	%% Uncomment to switch off tikzposter footer
+	% \tikzposterlatexaffectionproofoff
+
+\begin{document}
+
+	\maketitle
+
+	\begin{columns}
+
+		\column{0.5}
+
+%	------------------------------------------------------------------------------
+			\block{■  물건 위치}
+			{
+				\begin{large}
+					\begin{itemize}
+					\item [1.] 찾을 때 마다 인생 환멸을 느낌
+					\item [2.]  잘 적어 두자
+					\end{itemize}
+				\end{large}
+			}
+
+
+%	------------------------------------------------------------------------------
+		\block{■ 문구류 }
+		{
+			\setlength{\leftmargini}{7em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+%			\setlength{\partopsep}{0pt}
+%			\setlength{\parskip}{0pt}
+%			\setlength{\parsep}{0pt}
+%			\setlength{\topsep}{0pt}
+%			\setlength{\itemsep}{0pt}
+%			\setlength{\itemindent}{4em} % summary indentation: par 1.25cm + bullet 0.63 + magic number picked empirically (0.25cm)
+%			\setlength{\leftmargin}{0pt}			
+
+			\begin{large}
+			\begin{itemize}
+			\item [지우개] 다단 서랍장에 2개 + 2개 
+			\item [만년필]
+			\item [책철] 
+			\item [연필] 
+
+
+			\end{itemize}
+			\end{large}
+
+		}
+
+%	------------------------------------------------------------------------------
+		\block{■ 사경 }
+		{
+			\setlength{\leftmargini}{5em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+			\begin{large}
+			\begin{itemize}
+			\item [1.] 할것 
+			\item [2.] 한것 재경이 방
+			\item [3.] 울산 사무실 : 책상 책꽂이에 
+			\end{itemize}
+			\end{large}
+
+		}		
+
+
+
+
+%	------------------------------------------------------------------------------ 공구류
+		\block{■ 공구류 }
+		{
+			\setlength{\leftmargini}{7em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+%			\setlength{\partopsep}{0pt}
+%			\setlength{\parskip}{0pt}
+%			\setlength{\parsep}{0pt}
+%			\setlength{\topsep}{0pt}
+%			\setlength{\itemsep}{0pt}
+%			\setlength{\itemindent}{4em} % summary indentation: par 1.25cm + bullet 0.63 + magic number picked empirically (0.25cm)
+%			\setlength{\leftmargin}{0pt}			
+
+			\begin{large}
+			\begin{itemize}
+			\item [드릴]
+			\item [드라이브] 미 드라이브 
+			\item [책철] 
+			\item [연필] 
+			\end{itemize}
+			\end{large}
+
+		}
+
+
+
+%	------------------------------------------------------------------------------ 제본기
+		\block{■ 제본기 }
+			{				
+			\setlength{\leftmargini}{12em}
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+
+			\begin{large}
+			\begin{itemize}
+			\item [와이어 링 제본기] 미륵사 손잡이 고장난것
+			\item [와이어 링 제본기] 2층 방
+			\item [프라스틱 링]
+			\item [프라스틱 링] 반야선원
+			\end{itemize}
+			\end{large}
+		}
+
+%	------------------------------------------------------------------------------ 펀치기
+		\block{■ 펀칭기 }
+			{				
+			\setlength{\leftmargini}{12em}
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+
+			\begin{large}
+			\begin{itemize}
+			\item [3공펀치] 우암동 컨테이너 
+			\item [2공펀치]
+			\end{itemize}
+			\end{large}
+		}
+
+	%	====== ====== ====== ====== ====== 
+		\column{0.5}
+
+%	------------------------------------------------------------------------------ 책
+		\block{■ 2층 방 }
+			{				
+			\setlength{\leftmargini}{3em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+
+			\begin{large}
+			\begin{itemize}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\end{itemize}
+			\end{large}
+		}
+
+
+
+%	------------------------------------------------------------------------------ 책
+		\block{■ 지하실 }
+			{				
+			\setlength{\leftmargini}{3em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+
+			\begin{large}
+			\begin{itemize}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\end{itemize}
+			\end{large}
+		}
+
+
+%	------------------------------------------------------------------------------ 반야선원
+		\block{■ 반야선원 }
+			{				
+			\setlength{\leftmargini}{3em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+
+			\begin{large}
+			\begin{itemize}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+
+			\end{itemize}
+			\end{large}
+		}
+
+
+%	------------------------------------------------------------------------------ 울산지사
+		\block{■ 울산지사 }
+			{				
+			\setlength{\leftmargini}{3em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+
+			\begin{large}
+			\begin{itemize}
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+
+			\end{itemize}
+			\end{large}
+		}
+
+%	------------------------------------------------------------------------------ 파일
+			\block{■  파일 }
+			{
+					\setlength{\leftmargini}{8em}
+					\setlength{\labelsep} {1em}
+				\begin{large}
+					\begin{itemize}
+					\item [폴더명] KimDaeHee
+					\item [파일명] 김대희 물건 위치-포스트.tex 
+					\end{itemize}
+				\end{large}
+			}
+
+
+	\end{columns}
+
+
+
+
+\end{document}
+
+
+		\begin{huge}
+		\end{huge}
+
+		\begin{large}
+		\end{large}
+
+		\begin{large}
+		\end{large}
+
+		\begin{large}
+		\end{large}
+
