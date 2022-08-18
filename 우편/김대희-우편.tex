@@ -1,0 +1,2015 @@
+%	-------------------------------------------------------------------------------
+%
+%
+%
+%
+%
+%
+%
+%
+%	-------------------------------------------------------------------------------
+
+%\documentclass[10pt,xcolor=pdftex,dvipsnames,table]{beamer}
+%\documentclass[10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%\documentclass[aspectratio=1610,20pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+\documentclass[aspectratio=1610,12pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+
+		% Font Size
+		%	default font size : 11 pt
+		%	8,9,10,11,12,14,17,20
+		%
+		% 	put frame titles 
+		% 		1) 	slideatop
+		%		2) 	slide centered
+		%
+		%	navigation bar
+		% 		1)	compress
+		%		2)	uncompressed
+		%
+		%	Color
+		%		1) blue
+		%		2) red
+		%		3) brown
+		%		4) black and white	
+		%
+		%	Output
+		%		1)  	[default]	
+		%		2)	[handout]		for PDF handouts
+		%		3) 	[trans]		for PDF transparency
+		%		4)	[notes=hide/show/only]
+
+		%	Text and Math Font
+		% 		1)	[sans]
+		% 		2)	[sefif]
+		%		3) 	[mathsans]
+		%		4)	[mathserif]
+
+
+		%	---------------------------------------------------------	
+		%	슬라이드 크기 설정 ( 128mm X 96mm )
+		%	---------------------------------------------------------	
+			\setbeamersize{text margin left=10mm}
+			\setbeamersize{text margin right=10mm}
+
+	%	========================================================== 	Package
+			\usepackage{kotex}						% 한글 사용
+			\usepackage{amssymb,amsfonts,amsmath}	% 수학 수식 사용
+			\usepackage{color}					%
+			\usepackage{colortbl}					%
+
+
+
+			\usepackage[final]{pdfpages}		% pdf 사용
+			\usepackage{framed}			% pdf 사용
+			\usepackage{pdfpages}
+
+
+		
+
+	%		========================================================= 	Theme
+
+		%	---------------------------------------------------------	
+		%	전체 테마
+		%	---------------------------------------------------------	
+		%	테마 명명의 관례 : 도시 이름
+%			\usetheme{default}			%
+%			\usetheme{Madrid}    		%
+%			\usetheme{CambridgeUS}    	% -red, no navigation bar
+%			\usetheme{Antibes}			% -blueish, tree-like navigation bar
+
+		%	----------------- table of contents in sidebar
+			\usetheme{Berkeley}		% -blueish, table of contents in sidebar
+									% 개인적으로 마음에 듬
+
+%			\usetheme{Marburg}			% - sidebar on the right
+%			\usetheme{Hannover}		% 왼쪽에 마크
+%			\usetheme{Berlin}			% - navigation bar in the headline
+%			\usetheme{Szeged}			% - navigation bar in the headline, horizontal lines
+%			\usetheme{Malmoe}			% - section/subsection in the headline
+
+%			\usetheme{Singapore}
+%			\usetheme{Amsterdam}
+
+		%	---------------------------------------------------------	
+		%	색 테마
+		%	---------------------------------------------------------	
+%			\usecolortheme{albatross}	% 바탕 파란
+%			\usecolortheme{crane}		% 바탕 흰색
+%			\usecolortheme{beetle}		% 바탕 회색
+%			\usecolortheme{dove}		% 전체적으로 흰색
+%			\usecolortheme{fly}		% 전체적으로 회색
+%			\usecolortheme{seagull}	% 휜색
+%			\usecolortheme{wolverine}	& 제목이 노란색
+%			\usecolortheme{beaver}
+
+		%	---------------------------------------------------------	
+		%	Inner Color Theme 			내부 색 테마 ( 블록의 색 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{rose}		% 흰색
+%			\usecolortheme{lily}		% 색 안 칠한다
+%			\usecolortheme{orchid} 	% 진하게
+
+		%	---------------------------------------------------------	
+		%	Outter Color Theme 		외부 색 테마 ( 머리말, 고리말, 사이드바 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{whale}		% 진하다
+%			\usecolortheme{dolphin}	% 중간
+%			\usecolortheme{seahorse}	% 연하다
+
+		%	---------------------------------------------------------	
+		%	Font Theme 				폰트 테마
+		%	---------------------------------------------------------	
+%			\usfonttheme{default}		
+			\usefonttheme{serif}			
+%			\usefonttheme{structurebold}			
+%			\usefonttheme{structureitalicserif}			
+%			\usefonttheme{structuresmallcapsserif}			
+
+
+
+		%	---------------------------------------------------------	
+		%	Inner Theme 				
+		%	---------------------------------------------------------	
+
+%			\useinnertheme{default}
+			\useinnertheme{circles}		% 원문자			
+%			\useinnertheme{rectangles}		% 사각문자			
+%			\useinnertheme{rounded}			% 깨어짐
+%			\useinnertheme{inmargin}			
+
+
+
+
+		%	---------------------------------------------------------	
+		%	이동 단추 삭제
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{navigation symbols}{}
+
+		%	---------------------------------------------------------	
+		%	문서 정보 표시 꼬리말 적용
+		%	---------------------------------------------------------	
+%			\useoutertheme{infolines}
+
+
+			
+	%	---------------------------------------------------------- 	배경이미지 지정
+%			\pgfdeclareimage[width=\paperwidth,height=\paperheight]{bgimage}{./fig/Chrysanthemum.jpg}
+%			\setbeamertemplate{background canvas}{\pgfuseimage{bgimage}}
+
+		%	---------------------------------------------------------	
+		% 	본문 글꼴색 지정
+		%	---------------------------------------------------------	
+%			\setbeamercolor{normal text}{fg=purple}
+%			\setbeamercolor{normal text}{fg=red!80}	% 숫자는 투명도 표시
+
+
+		%	---------------------------------------------------------	
+		%	itemize 모양 설정
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{items}[ball]
+%			\setbeamertemplate{items}[circle]
+%			\setbeamertemplate{items}[rectangle]
+
+
+
+
+
+
+		\setbeamercovered{dynamic}
+
+
+
+
+
+		% --------------------------------- 	문서 기본 사항 설정
+		\setcounter{secnumdepth}{5} 		% 문단 번호 깊이
+		\setcounter{tocdepth}{5} 			% 문단 번호 깊이
+
+
+
+
+% ------------------------------------------------------------------------------
+% Begin document (Content goes below)
+% ------------------------------------------------------------------------------
+	\begin{document}
+	
+
+			\title{우편 봉투 주소}
+			\author{김대희}
+
+			\date{ 2022 년 7월 8일 }
+
+%			\institute[KTS]{(주)서영엔지니어링 \texttt{http://symsone.seoyeong.co.kr/}}
+
+
+
+	%	==========================================================
+	%
+	%	----------------------------------------------------------
+		\begin{frame}[plain]
+		\titlepage
+		\end{frame}
+
+
+
+	%	==========================================================
+	%		Frame
+	%	----------------------------------------------------------
+		\begin{frame}[allowframebreaks]
+		\frametitle{Overview}
+%			\begin{columns}[c, onlytextwidth]
+					\tableofcontents
+%			\end{columns}
+		\end{frame}
+
+
+
+
+
+
+
+	%	---------------------------------------------------------- 초량집
+	%		Frame
+	%	----------------------------------------------------------
+		\section{보내는 사람 : 초량집 }
+		\begin{frame}[c,plain]{백중}
+
+		\begin{columns}[t]
+		\begin{column}{0.6\textwidth}
+
+			\begin{block} {보내는 사람}
+			\begin{enumerate}
+			\item [] 우) 48798
+			\item [] 부산광역시 동구 중앙대로 251번길 28 (초량동)
+			\item [] 김대희 (010-3839-5609)
+			\end{enumerate}
+			\end{block}
+%		\end{column}
+
+%		\begin{column}{1.0\textwidth}
+
+			\begin{block} {받는 사람}
+			\begin{enumerate}
+			\item [] 우) 13595
+			\item [] 경기도 성남시 분당구 황새울로 246
+			\item []  (수내동,도담빌딩) A동 13층
+			\item [] (주)서영엔지니어링 건설관리팀
+			\item [] 한지원 사원 (02-6915-7264)
+			\end{enumerate}
+			\end{block}
+
+		\end{column}
+
+		\end{columns}
+		\null
+		\end{frame}
+
+
+
+%	%	---------------------------------------------------------- 받는사람효심사
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\section{ 받는 사람 효심사 }
+%	
+%		\begin{frame}[t,plain]{ 효심사 }
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {받는 사람}
+%			\begin{enumerate}
+%			\item [] 우) 47813
+%			\item [] 부산광역시 동래구 충렬대로 237번가길 31(수안동) 6층
+%			\item [] 효심사 (유지호)
+%			\item [] 
+%			\item [] 
+%			\end{enumerate}
+%			\end{block}
+%
+%		\end{column}
+%
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+
+
+	%	---------------------------------------------------------- 받는사람정엔지니어링
+	%		Frame
+	%	----------------------------------------------------------
+		\section{받는 사람 정엔지니어링}
+	
+		\begin{frame}[c,plain]{정엔지니어링}
+
+		\begin{columns}[t]
+		\begin{column}{0.80\textwidth}
+
+			\begin{block} {보내는 사람}
+			\begin{enumerate}
+			\item [] 우) 48798
+			\item [] 부산광역시 동구 중앙대로 251번길 28 (초량동)
+			\item [] 김대희 (010-3839-5609)
+			\end{enumerate}
+			\end{block}
+.
+
+
+
+			\begin{block} {받는 사람}
+			\begin{enumerate}
+			\item [] 우) 13217
+			\item [] 경기도 성남시 중원구 갈마치로 215
+			\item []  B동 702호 (상대원동, 금강펜테리움IT타워)
+			\item [] (주)정엔지니어링 
+			\item [] 명현준 부장 ( 010 9970 2001 )
+			\end{enumerate}
+			\end{block}
+
+		\end{column}
+
+		\begin{column}{.2\textwidth}
+		\end{column}
+		\end{columns}
+
+		\end{frame}
+
+
+	%	---------------------------------------------------------- 받는사람가온기술
+	%		Frame
+	%	----------------------------------------------------------
+		\section{받는 사람 가온기술 }
+	
+		\begin{frame}[c,plain]{정엔지니어링}
+
+		\begin{columns}[t]
+		\begin{column}{1.0\textwidth}
+
+			\begin{block} {받는 사람}
+			\begin{enumerate}
+			\item [] 우) 55105
+			\item [] 전북 전주시 완산구 안행2길 33 2층
+			\item []
+			\item [] 유한회사 가온기술
+			\item [] 
+			\end{enumerate}
+			\end{block}
+
+		\end{column}
+
+		\begin{column}{.2\textwidth}
+		\end{column}
+		\end{columns}
+
+		\end{frame}
+
+
+	%	---------------------------------------------------------- 받는사람우리집
+	%		Frame
+	%	----------------------------------------------------------
+		\section{받는 사람 우리집}
+		\begin{frame}[c,plain]{받는 사람 우리집}
+
+		\begin{columns}[t]
+		\begin{column}{1.0\textwidth}
+
+			\begin{block} {받는 사람}
+			\begin{enumerate}
+			\item [] 우) 48798
+			\item [] 부산광역시 동구 중앙대로 251번길 28 (초량동)
+			\item [] 김대희 (010-3839-5609)
+			\end{enumerate}
+			\end{block}
+		\end{column}
+		\end{columns}
+
+		\end{frame}
+
+
+
+%	%	---------------------------------------------------------- 받는사람부산역사무실
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\section{받는 사람 부산역 사무실}
+%		\begin{frame}[c,plain]{받는 사람 부산역 사무실}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {받는 사람}
+%			\begin{enumerate}
+%			\item [] 우) 48760
+%			\item [] 부산광역시 동구 충장대로 127(초량동)
+%			\item [] 부산항운노동조합 4층
+%			\item [] 김대희 (010-3839-5609)
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+
+%	%	---------------------------------------------------------- 받는사람우암동사무실
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\section{받는 사람 우암동 사무실}
+%		\begin{frame}[c,plain]{받는 사람 우암동 사무실}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {받는 사람}
+%			\begin{enumerate}
+%			\item [] 부산광역시 남구 우암동 265번지
+%			\item [] 토영종합건설
+%			\item [] 김대희 (010-3839-5609)
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+
+
+%	%	---------------------------------------------------------- 받는사람영선중학교
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\section{받는 사람 영선중학교}
+%		\begin{frame}[c,plain]{받는 사람 영선중학교}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {받는 사람}
+%			\begin{enumerate}
+%			\item [] 우) 49 072
+%			\item [] 부산광역시 영도구 영상길 83
+%			\item [] 부산영선중학교 
+%			\item [] 안신영 (010-9919-5609)
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+
+	%	---------------------------------------------------------- 받는사람초장중학교
+	%		Frame
+	%	----------------------------------------------------------
+		\section{받는 사람 초장중학교}
+		\begin{frame}[c,plain]{받는 사람 초장중학교}
+
+		\begin{columns}[t]
+		\begin{column}{1.0\textwidth}
+
+			\begin{block} {받는 사람}
+			\begin{enumerate}
+			\item [] 우) 49 250
+			\item [] 부산광역시 서구 해돋이로 205
+			\item [] 부산초장중학교 
+			\item [] 안신영 (010-9919-5609)
+			\end{enumerate}
+			\end{block}
+		\end{column}
+		\end{columns}
+
+		\end{frame}
+
+
+
+	%	---------------------------------------------------------- 받는사람배호준
+	%		Frame
+	%	----------------------------------------------------------
+		\section{받는 사람 배호준}
+		\begin{frame}[c,plain]{받는 사람 배호준}
+
+		\begin{columns}[t]
+		\begin{column}{1.0\textwidth}
+
+			\begin{block} {받는 사람}
+			\begin{enumerate}
+			\item [] 우) 12 735
+			\item [] 경기도 광주시 초월읍 무들로 28
+			\item [] 우림푸른마을 아파트 102동 701호
+			\item [] 배호준  (010-9024-1673
+			\end{enumerate}
+			\end{block}
+		\end{column}
+		\end{columns}
+
+		\end{frame}
+
+	%	---------------------------------------------------------- 나정숙
+	%		Frame
+	%	----------------------------------------------------------
+		\section{받는 사람 나정숙}
+		\begin{frame}[c,plain]{백중}
+
+		\begin{columns}[t]
+		\begin{column}{0.6\textwidth}
+
+			\begin{block} {보내는 사람}
+			\begin{enumerate}
+			\item [] 울산광역시 울주군 온양읍 광청로 796-66
+			\item [] 김대희 (010-3839-5609)
+			\end{enumerate}
+			\end{block}
+%		\end{column}
+
+%		\begin{column}{1.0\textwidth}
+
+			\begin{block} {받는 사람}
+			\begin{enumerate}
+			\item [] 우) 49520
+			\item [] 부산광역시 사하구 다대로473 
+			\item [] 다대 현대아파트 107동 2202호
+			\item [] 나정숙 (010 3375 5817)
+			\end{enumerate}
+			\end{block}
+
+		\end{column}
+
+		\end{columns}
+		\null
+		\end{frame}
+
+
+
+	%	---------------------------------------------------------- 에코델타
+	%		Frame
+	%	----------------------------------------------------------
+		\section{받는 사람 서영 한지원}
+		\begin{frame}[c,plain]{백중}
+
+		\begin{columns}[t]
+		\begin{column}{0.6\textwidth}
+
+			\begin{block} {보내는 사람}
+			\begin{enumerate}
+			\item [] 부산광역시 강서구 강동동 4999-3번지
+			\item [] 현대건설 내 에코델타 감독실
+			\item [] 김대희 (010-3839-5609)
+			\end{enumerate}
+			\end{block}
+%		\end{column}
+
+%		\begin{column}{1.0\textwidth}
+
+			\begin{block} {받는 사람}
+			\begin{enumerate}
+			\item [] 우) 13595
+			\item [] 경기도 성남시 분당구 황새울로 246
+			\item []  (수내동,도담빌딩) A동 13층
+			\item [] (주)서영엔지니어링 건설관리팀
+			\item [] 한지원 사원 (02-6915-7264)
+			\end{enumerate}
+			\end{block}
+
+		\end{column}
+
+		\end{columns}
+		\null
+		\end{frame}
+
+
+
+%	%	---------------------------------------------------------- 세상의모든명언
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[t,plain]{세상의 모든 명언}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {세상의 모든 명언}
+%			\begin{enumerate}
+%			\item [] 미안해요, I AM SORRY
+%			\item [] 괜찮아요, THAT'S OKAY
+%			\item [] 좋아요, GOOD
+%			\item [] 잘했어요!, WELL DONE
+%			\item [] 휼륭해요, GREAT
+%			\item [] 고마워요, THANK YOU
+%			\item [] 사랑해요,I LOVE TOU
+%			\end{enumerate}
+%			\end{block}
+%
+%		\end{column}
+%
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%
+%	%	---------------------------------------------------------- 조경수의기본
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[t,plain]{조경수의 기본}
+%
+%		\begin{columns}[t]
+%		\begin{column}{.8\textwidth}
+%
+%			\begin{block} {조경수의 기본}
+%			\begin{enumerate}
+%			\item [] 	조경수는 기본적으로 나무 모양이 아름답고 옮겨심어도 활착이 잘 되어야 하며, 
+%					기상이나 병충해에 강하고 번식이 잘 되며 
+%					시장성이 높은 종류여야 한다.
+%			\end{enumerate}
+%			\end{block}
+%
+%		\end{column}
+%
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%	%	---------------------------------------------------------- 10악업
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[t,plain]{10악업}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {10악업}
+%			\begin{enumerate}
+%			\item [] 	10악업
+%			\item [] 	신3(身三): 몸[身]으로 짓는 3가지 악업
+%			\item [] 	구4(口四): 말[口]로 짓는 4가지 악업
+%			\item [] 	의3(意三): 뜻[意, 마음]으로 짓는 3가지 악업
+%			\end{enumerate}
+%			\end{block}
+%
+%		\end{column}
+%
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%	%	---------------------------------------------------------- 10악업
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[t,plain]{10악업}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {10악업- 신3(身三): 몸[身]으로 짓는 3가지 악업}
+%				\begin{enumerate}
+%				\item [] 	살생(殺生): 중생을 죽임
+%				\item [] 	투도(偸盜): 도둑질
+%				\item [] 	사음(邪婬): 부정한 정교
+%				\end{enumerate}
+%			\end{block}
+%
+%		\end{column}
+%
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%	%	---------------------------------------------------------- 10악업
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[t,plain]{10악업}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {10악업 - 구4(口四): 말[口]로 짓는 4가지 악업}
+%				\begin{enumerate}
+%				\item  	망어(妄語): 거짓말
+%				\item  	양설(兩舌): 이간질하는 말
+%				\item  	악구(惡口): 괴롭히는 말, 성나게 하는 말, 욕설
+%				\item  	기어(綺語): 진실이 없는 꾸민 말
+%				\end{enumerate}
+%			\end{block}
+%
+%		\end{column}
+%
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%	%	---------------------------------------------------------- 10악업
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[t,plain]{10악업}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {10악업 - 의3(意三): 뜻[意, 마음]으로 짓는 3가지 악업}
+%				\begin{enumerate}
+%				\item  	탐욕(貪欲): 어리석음을 바탕하여 구하고 원하는 것, 타인의 재물을 자기 것으로 할려는 악욕(惡欲)
+%				\item  	진에(瞋恚): 성냄
+%				\item  	사견(邪見): 특히 인과법을 부정하는 것
+%				\end{enumerate}
+%			\end{block}
+%
+%		\end{column}
+%
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%
+%	%	---------------------------------------------------------- 혜원정사
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{혜원정사}
+%
+%		\begin{columns}[t]
+%		\begin{column}{.8\textwidth}
+%
+%			\begin{block} {혜원정사}
+%			\begin{enumerate}
+%			\item [] 	지하철 8번출구 도로 10분
+%			\item [] 	54,100-1번 연산중학교 도보 5분
+%			\end{enumerate}
+%			\end{block}
+%
+%		\end{column}
+%
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%	%	---------------------------------------------------------- 불교대학
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{불교대학}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {불교대학}
+%			\begin{enumerate}
+%			\item [] 	부산불교교육대학
+%			\item [] 	금강불교대학
+%			\item [] 	금정불교대학
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%	%	---------------------------------------------------------- 불교대학
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{불교대학}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%			\begin{block} {조계종인가 불교대학}
+%			\begin{enumerate}
+%			\item [] 	1. 대광불교대학 :  
+%			\item [] 	부산진구 부전1동 390-34번지 통도사부산포교원 
+%			\item [] 	051-816-2245 		
+%			\item [] 	1년 2학기제
+%			\end{enumerate}
+%			\end{block}
+%
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%	%	---------------------------------------------------------- 불교대학
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{불교대학}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%			\begin{block} {조계종인가 불교대학}
+%			\begin{enumerate}
+%			\item [] 	2. 부산불교교육대학 : 
+%			\item [] 	부산진구 양정2동 157-1번지 부산불교회관5층 
+%			\item [] 	051-867-9944       	
+%			\item [] 	1년 2학기제
+%			\end{enumerate}
+%			\end{block}
+%
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%	%	---------------------------------------------------------- 불교대학
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{불교대학}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%			\begin{block} {조계종인가 불교대학}
+%			\begin{enumerate}
+%			\item [] 	3. 범어사 금정불교대학 : 
+%			\item [] 	부산진구 양정1동 393-12번지 불교회관내 
+%			\item [] 	051-866-7277          	
+%			\item [] 	1년 2학기제
+%			\end{enumerate}
+%			\end{block}
+%
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	---------------------------------------------------------- 동래정토회
+%		\begin{frame}[c,plain]{동래정토회}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {동래정토회}
+%			\begin{enumerate}
+%			\item [] 	동래정토회
+%			\item [] 	2018년 가을 불교대학 접수기간
+%					7.16(월) ~ 9.9(일)
+%
+%			\end{enumerate}
+%			\end{block}
+%
+%
+%		\end{column}
+%
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%
+%	%	---------------------------------------------------------- 지금
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{지금}
+%
+%
+%			
+%			\begin{flushright}
+%			{\huge 지금}
+%			\end{flushright}
+%
+%
+%		\end{frame}
+%
+%
+%	%	---------------------------------------------------------- 지금
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{지금}
+%
+%
+%			
+%			\begin{flushright}
+%			{\huge 지금 하지 않으면 언제 하겠는가?}
+%			\end{flushright}
+%
+%
+%		\end{frame}
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{지금}
+%
+%			\begin{flushright}
+%			{\huge 고통을 이길 수 없다면 고통을 사랑하라.}
+%			\end{flushright}
+%
+%
+%		\end{frame}
+%
+%
+%	%	---------------------------------------------------------- 너무애쓰지마라
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{지금}
+%
+%			{\huge 너무 애쓰지 마라.} \\
+%
+%			\begin{flushright}
+%			{\large 지금 눈앞에 있는 것에 집중하라.} \\ 
+%			{\large 좋은 날을 하나씩 쌓아 좋은 인생을 만들어라} \\
+%			{\large 똑같은 실수를 반복하지 않으면 충분하다.}
+%			\end{flushright}
+%
+%
+%		\end{frame}
+%
+%
+%	%	---------------------------------------------------------- 너무애쓰지마라
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{지금}
+%			\begin{flushright}
+%			{\huge 지금 눈앞에 있는 것에 집중하라.}
+%			\end{flushright}
+%		\end{frame}
+%
+%	%	---------------------------------------------------------- 너무애쓰지마라
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{지금}
+%			\begin{flushright}
+%			{\huge 좋은 날을 하나씩 쌓아 좋은 인생을 만들어라} \\
+%			\end{flushright}
+%
+%
+%		\end{frame}
+%
+%
+%
+%	%	---------------------------------------------------------- 너무애쓰지마라
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{지금}
+%			\begin{flushright}
+%			{\huge 똑같은 실수를 반복하지 않으면 충분하다.}
+%			\end{flushright}
+%		\end{frame}
+%
+%
+%
+%
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{지금}
+%			\begin{flushright}
+%			{\huge 원하는 삶이 아닌 감수하는 삶}
+%			\end{flushright}
+%		\end{frame}
+%
+%
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[t,plain]{지금}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {불쌍한 찰리 이야기}
+%			\begin{enumerate}
+%			\item [] 	제목 : 불쌍한 찰리 이야기
+%			\item [] 	지은이  : 찰리 밍거
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[t,plain]{지금}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {리틀 빅 씽 The Little BIG Things}
+%			\begin{enumerate}
+%			\item [] 	제목 : 리틀 빅 씽 The Little BIG Things
+%			\item [] 	지은이  : 톰 피터스
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%
+%01 충격점에 집중하라.
+%02 시간을 고용하라
+%03 테니스 공, 동그라미 그리고 30,00
+%04 5분안에 증명하라
+%05 인생은 둘중 하나다
+%06 마스터에게 플러스알파를 주어라
+%07 녹화 버튼을 눌러라
+%08 17퍼센트 이상은 신의 영역이다
+%09 속도를 올려야 할때는 언제인가
+%10 지금 여기에 살아 있어라
+%11 성공 스타일을 찾아라
+%12 그냥, 앉아 있으라!
+%13 영원이 추구하라
+%14 래리는 어떻게 킹이 되었을까
+%15 나보다 더 큰것을 위해 살라
+%16 미쳤다는 소리를 듣고 있는가
+%17  피드백은 독이 든 성배다
+%18  모든 방법이 효곽가 없는가?
+%19  점을 찍어야 선이 생겨나고 면이 완성된다.
+%20  할일을 하라
+%21  지금 하지 않으면 언제 하겠는가
+%22  인생을 눈에 보이는 곳에 두어라
+%23  쉽게 만들어라
+%24  사링이 최고의 몰입을 만든다
+%25  시수를 일기 마라
+%26  신은 겁쟁이를 통해 자신의 뜻을 전달하지 않는다.
+%27  메멘토 모리를 기억하라
+%28  함께 일고 쓰고 산책하라
+%29  내 영혼에 말을 걸어라
+%30  인생은 늘 사라질 준비를 한다.
+%31  최고의 인재는 누구인가
+%32  유능해질 시간을 확보하라
+%33  스무살에 알았더라면 좋았을 것들
+%34  우아한 거절의 기술
+%35  마지막 사람이 함정이다.
+%36  깨달은 자가 되어라
+%37  삶은 매 순간 최선을 다해 흘러간다
+%38  관계는 기회로 들어가는 입구다
+%39  빼앗긴 마음을 회복하라
+%40  가장 지혜로운 채찍은 휴식이다
+%41  사람은 뼈아픈 실패를 통해 성장한다.
+%42  트라우마를 찾아내라
+%43  서른 살에 은퇴하기
+%44  세계 최고 퍼포머들의 5가지 특성
+%45  강을 건너야 원하는 것을 얻는다.
+%46  어떤 사람이 경지에 오르는가
+%47  초점이 모든것의 열쇠다.
+%48  '제거하기'와 '하기'로 나눠라
+%49  모든 방법을 총동원 하라
+%50  행동을 데이터로 만들어라
+%51  두려움이 인생의 현자다
+%52  너 자신을 알라
+%
+%
+%
+%
+%
+%  
+%
+%
+%
+% 
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{붓다}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {절을 하면 무엇이 좋은가?}
+%			\begin{enumerate}
+%			\item [] 	절이란 자신을 한없이 낮추는 행위이다.
+%			\item [] 	교만한 마음이 일어날 때, 남을 시기 질투하고 싶은 마음이 일어날때, 남에게 화가 나서 폭력을 휘두르고 싶을때 차라리 절을 해보아라, 
+%					그 대상과 그 사람을 향해여,
+%			\item [] 	절은 또한 복을 짓는 일이다.
+%					왜냐하면 절에는 참회가 따르기 때문이다.
+%			\item [] 	참회는 자신의 지나온 죄업을 씻어내고, 그 자리에 좋은 종자를 심는 일이니, 복이 스스로 찾아오게 마련이다. \\
+%			\item [] 	청소년들이여, 지치고 힘들 땐 아무때나 어디서나 절을 해 보아라
+%			\end{enumerate}
+%			\end{block}
+%
+%
+%		\end{column}
+%
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{붓다}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {절을 하면 무엇이 좋은가?}
+%			\begin{enumerate}
+%			\item [] 	절이란 자신을 한없이 낮추는 행위이다.
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%		\end{columns}
+%		\end{frame}
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{붓다}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {절을 하면 무엇이 좋은가?}
+%			\begin{enumerate}
+%			\item [] 	교만한 마음이 일어날 때, 남을 시기 질투하고 싶은 마음이 일어날때, 남에게 화가 나서 폭력을 휘두르고 싶을때 차라리 절을 해보아라, 
+%					그 대상과 그 사람을 향해여,
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%		\end{columns}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{붓다}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%			\begin{block} {절을 하면 무엇이 좋은가?}
+%			\begin{enumerate}
+%			\item [] 	절은 또한 복을 짓는 일이다.
+%					왜냐하면 절에는 참회가 따르기 때문이다.
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{붓다}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%			\begin{block} {절을 하면 무엇이 좋은가?}
+%			\begin{enumerate}
+%			\item [] 	참회는 자신의 지나온 죄업을 씻어내고, 그 자리에 좋은 종자를 심는 일이니, 복이 스스로 찾아오게 마련이다. \\
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{붓다}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%
+%			\begin{block} {절을 하면 무엇이 좋은가?}
+%			\begin{enumerate}
+%			\item [] 	청소년들이여, 지치고 힘들 땐 아무때나 어디서나 절을 해 보아라
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%		\end{columns}
+%		\end{frame}
+%
+%
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%
+%		\begin{columns}[b]
+%		\begin{column}{1.00\textwidth}
+%			\begin{block} {요가}
+%			\large{요가는 수련이지 완성이 아니다}
+%			\end{block}
+%		\end{column}
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%
+%		\begin{columns}[b]
+%		\begin{column}{1.00\textwidth}
+%			\begin{block} {요가}
+%			\large{요가 연습에서는 잘되는 자세를 더 잘하기 보다는}
+%			안되는 자세를 보완하는 것이 
+%			요가의 진짜 목적인 균형회복에 부합된다.
+%			\end{block}
+%		\end{column}
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[t,plain]{요가}
+%
+%		\begin{columns}[b]
+%		\begin{column}{1.00\textwidth}
+%			\begin{block} {요가 요령}
+%			\begin{enumerate}
+%			\item  	\Large{등 펴고 - 허리 세우고}
+%			\item  	배 집어 넣고
+%			\item  	하나씩 천천히
+%			\item  	호흡하기
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{붓다}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%			\begin{block} {숨 내쉬기}
+%			\begin{enumerate}
+%			\item  	홀수때 들이쉰다
+%			\item 홀수 미간 푸라카 들이쉰다
+%			\item 짝수 코끝 레차카 내쉰다
+%			\end{enumerate}
+%			\end{block}
+%		\end{column}
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%		\end{frame}
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{붓다}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%			\begin{block} {숨 내쉬기}
+%				숨을 마시면서 시작한다.\\
+%				숨을 마시면서 미간을 응시하고 시작한다.
+%				푸라카
+%			\end{block}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{붓다}
+%
+%		\frametitle{요가}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%			\begin{block} {파드마 아사나}
+%			아사나 상태에서\\
+%			레차카와 푸라카를 \\
+%			천천히, 최대한 많이 해야 한다.
+%			\end{block}
+%		\end{column}
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%		\end{frame}
+%
+%	%	---------------------------------------------------------- 요가반다
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%
+%		\frametitle{요가}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%			\begin{block} {반다}
+%			반다
+%			\end{block}
+%		\end{column}
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%		\end{frame}
+%
+%
+%
+%	%	---------------------------------------------------------- 요가
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%
+%		\frametitle{요가}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%			\begin{block} {반다}
+%
+%			\begin{enumerate}
+%			\item 잘라다라 반다 : 목
+%			\item 우띠아나 반다 : 배
+%			\item 물라 반다	: 항문
+%			\end{enumerate}
+%
+%			\end{block}
+%		\end{column}
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%
+%		\frametitle{요가}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%			\begin{block} {우띠아나 반다}
+%
+%			등을 펴면 \\
+%			자연 스럽게  반다가 잡힌다
+%
+%
+%			\end{block}
+%		\end{column}
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%		\end{frame}
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {스파인 시퀸스 베이직 레벨1} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {스파인 시퀸스 베이직 레벨2} \end{block}
+%		\end{frame}
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {스파인 시퀸스 베이직 레벨3} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {확장호흡 따라하기 } \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {손목풀기} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {발목풀기} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {앉아서 발끝당기기} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {앉아서 허벅지 앞쪽늘이기} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {뒤로 구르기} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {좌우로 구르기} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {엎드려 가슴 근육 늘리기} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {뒷목늘리기} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {물고기 자세} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {다리근육 늘이기1,2} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {한쪽 다리 벌리기} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {우카타아사나 - 강하게 서기자세} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {우타나아사나 - 서서 숙이기 자세} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {우티타트리코나아사나 - 삼각자세} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {우티타파르스바코나아사나 - 측면늘리기} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {프라사리타파도타나아사나 - 사지강화자세} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {바리바드라아사나 - 강력한 영웅 자세} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {자누시르사아사나 } \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {아르다숩타비라아사나} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {드위빠다삐담 - 반아치} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {숩다그리바산찰라나 - 목늘리기} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {맏스야아사나 - 물고기자세} \end{block}
+%		\end{frame}
+%
+%	%	----------------------------------------------------------
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{요가}
+%			\frametitle{요가}
+%			\begin{block} {요가니드라 의식적 이완법} \end{block}
+%		\end{frame}
+%
+%			
+%
+%
+%
+%	%	---------------------------------------------------------- 웃다리
+%	%		Frame
+%	%	----------------------------------------------------------
+%		\begin{frame}[c,plain]{웃다리}
+%
+%		\frametitle{웃다리}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.1\textwidth}
+%			\begin{block} {웃다리}
+%
+%			\begin{enumerate}
+%			\item 덩 더궁
+%			\item 궁따 구궁따
+%			\item 더구 더구 더
+%			\end{enumerate}
+%
+%			\end{block}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame 	내일 할 일
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{메모}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.0\textwidth}
+%			\begin{block} {메모}
+%			\Large{웃다리 정리}
+%
+%			\end{block}
+%		\end{column}
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%
+%	%	---------------------------------------------------------- 메
+%	%		Frame	오늘 할 일
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{메모}
+%
+%		\begin{columns}[t]
+%		\begin{column}{1.1\textwidth}
+%			\begin{block} {메모}
+%			\large{요가복 재고 조사}
+%
+%			\end{block}
+%		\end{column}
+%		\begin{column}{.2\textwidth}
+%		\end{column}
+%		\end{columns}
+%
+%		\end{frame}
+%
+%
+%
+%
+%
+%
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame	인터넷 검색
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{메모}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {인터넷 검색}
+%				\Large{치과 이가탄 처방}
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame		내일 할 일
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{메모}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {내일 출근 해서 할일}
+%				\Large{도서 스캔}
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%	%	----------------------------------------------------------
+%	%		Frame		내일 할 일
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{메모}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {치유엔 요가 요가엔 호흡}
+%				\Large{치유엔 요가 \\ 요가엔 호흡}
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%	%	---------------------------------------------------------- 	치유엔요가
+%	%		Frame		내일 할 일
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{메모}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {치유엔 요가 요가엔 호흡}
+%				\Large{우리 몸은 산소가 필요하다}
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%
+%	%	---------------------------------------------------------- 	치유엔요가
+%	%		Frame		내일 할 일
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{메모}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {치유엔 요가 요가엔 호흡}
+%				\Large{설렁설렁 요가의 진수}
+%				설렁설렁은 대충대충이 아니다 \\
+%				요가와 스트레치의 차이  \newpage
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%
+%
+%
+%
+%		\clearpage
+%	%	---------------------------------------------------------- 	치유엔요가
+%	%		Frame		내일 할 일
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{복식호흡}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {	복식호흡}
+%				\Large{배에 힘을 주고 하기 때문에 복식호흡이라 한다.}
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%
+%
+%		\clearpage
+%	%	---------------------------------------------------------- 	치유엔요가
+%	%		Frame		내일 할 일
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{복식호흡}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {흉식호흡}
+%				\Large{가슴전체의 늑간근을 이용해서 숨을 쉬는 방식}
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%		\clearpage
+%	%	---------------------------------------------------------- 	치유엔요가
+%	%		Frame		치유엔 요가 요가엔 호흡
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{복식호흡}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {횡격막 호흡}
+%				\Large{}
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%		\clearpage
+%	%	---------------------------------------------------------- 	치유엔요가
+%	%		Frame		치유엔 요가 요가엔 호흡
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{복식호흡}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {확장 호흡}
+%				\Large{}
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%
+%
+%		\clearpage
+%	%	---------------------------------------------------------- 	치유엔요가
+%	%		Frame		치유엔 요가 요가엔 호흡
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{복식호흡}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {확장 호흡}
+%				\Large{확장호흡은 의식적이고 능동적으로 내가 해야 하는 호흡이고 }
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%		\clearpage
+%	%	---------------------------------------------------------- 	치유엔요가
+%	%		Frame		치유엔 요가 요가엔 호흡
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{복식호흡}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {복식 호흡}
+%				\Large{복식호흡은 몸을 자연스럽게 놔두면 되는 호흡이다.}
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%		\clearpage
+%	%	---------------------------------------------------------- 	치유엔요가
+%	%		Frame		치유엔 요가 요가엔 호흡
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{메모}
+%
+%		\frametitle{복식호흡}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {명문혈}
+%				\Large{명문혈}
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%		\clearpage
+%	%	---------------------------------------------------------- 	악어자세
+%	%		Frame		치유엔 요가 요가엔 호흡
+%	%	----------------------------------------------------------
+%		\section{메모}
+%		\begin{frame}[c,plain]{요가}
+%
+%		\frametitle{요가}
+%			\begin{columns}[t]
+%			\begin{column}{1.0\textwidth}
+%				\begin{block} {악어자세}
+%				\Large{명문혈}
+%				\end{block}
+%			\end{column}
+%			\end{columns}
+%		\end{frame}
+%
+%
+%		\clearpage
+%	%	----------------------------------------------------------
+%	%		Frame		인정
+%	%	----------------------------------------------------------
+%		\section{좋은말}
+%		\begin{frame}[c,plain]{좋은말}
+%			\frametitle{인정}
+%			\includegraphics[width=1.0\textwidth]{./fig/g_dbgUd018svc1kc6jsq6s1nfd_8pzn1m.jpg}																
+%		\end{frame}
+%
+%
+%
+%		\clearpage
+%	%	----------------------------------------------------------
+%	%		Frame		내일 할 일
+%	%	----------------------------------------------------------
+%		\section{한자}
+%		\begin{frame}[c,plain]{한자}
+%			\frametitle{한자}
+%			\includegraphics[width=1.0\textwidth]{./four/0_486Ud018svc267w78t020cu_i5bak.jpg}											\end{frame}
+%
+%
+%
+%
+%
+%
+%
+
+
+% ------------------------------------------------------------------------------
+% End document
+% ------------------------------------------------------------------------------
+\end{document}
+
+
+
+
+
+				\clearpage
+				\includepdf[pages=-, fitpaper=true] {./pdf/2222.pdf}
+
+				\includegraphics[width=0.6\textwidth]{./fig/in-count-20181023_170045774.jpg}																	
+
+
+
+
+		\documentclass{beamer}
+		\usepackage{pdfpages}
+		\begin{document}
+		\begin{frame}
+		Content
+		\end{frame}
+		{
+		\setbeamercolor{background canvas}{bg=}
+		\includepdf[pages=3]{filea.pdf}
+		}
+		\end{document}
+
+
+
+				\clearpage
+				\setbeamercolor{background canvas}{bg=}
+				\includepdf[pages=1]{./pdf/1111.pdf}
+
+				\includepdf[pages=1]{./pdf/2222.pdf}
+
+				\includepdf[pages=1]{./pdf/3333.pdf}
+
+				\includepdf[pages=1]{./pdf/1111.pdf}
+
+
+				\includegraphics[width=0.6\textwidth]{./pdf/1111.jpg}
